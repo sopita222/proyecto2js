@@ -80,7 +80,7 @@ class Store {
 const store = new Store();
 const cart = new Cart();
 
-// Función para renderizar los productos en el DOM
+
 function renderProducts() {
     const productContainer = document.getElementById('product-container');
     store.getProducts().forEach(product => {
@@ -98,7 +98,7 @@ function renderProducts() {
         productContainer.appendChild(productDiv);
     });
 
-    // Añade los eventos a los botones de agregar al carrito
+    
     document.querySelectorAll('.add-to-cart').forEach(button => {
         button.addEventListener('click', (event) => {
             const productId = parseInt(event.target.getAttribute('data-id'));
@@ -111,7 +111,7 @@ function renderProducts() {
 // Renderiza los productos al cargar la página
 renderProducts();
 
-// Eventos para ver y vaciar el carrito
+
 document.getElementById('view-cart').addEventListener('click', () => {
     cart.renderCart();
 });
